@@ -1,0 +1,23 @@
+{
+    "name": "particlesystem",
+    "version-string" : "0.0.2",
+    "homepage" : "https://gitlab.liu.se/tnm094-labs/particlesystem",
+    "license": "BSD-2-Clause",
+    "vcpkg-configuration": {
+        "default-registry": {
+            "kind": "builtin",
+            "baseline": "6f29f12e82a8293156836ad81cc9bf5af41fe836"
+        }
+    },
+    "dependencies" : [
+        "catch2",
+        "fmt",
+        "glad",
+        "glfw3",
+        "glm",
+        { 
+            "name": "imgui",
+            "features" : ["glfw-binding", "opengl3-binding"]
+        }
+    ]
+}
