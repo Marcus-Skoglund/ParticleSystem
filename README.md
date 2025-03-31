@@ -7,6 +7,9 @@
 A minimal particle system acting as a foundation for the course labs.
 A small graphical interface is provided for visually editing parameters.
 
+#### UML diagrams
+[Click here for diagrams](https://img.shields.io/badge/contributors-3-green)
+
 #### Folder structure
 
 - /include: Header files
