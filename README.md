@@ -1,6 +1,6 @@
 ## TNM094 Labs - Particle System
 
-![Contributors](https://img.shields.io/badge/contributors-3-orange)
+![Contributors](https://img.shields.io/badge/contributors-3-green)
 
 ## Authors: Marcus Skoglund & Anton Martic
 
