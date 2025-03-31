@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": { "major": 3, "minor": 21, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "vcpkg",
+      "hidden": true,
+      "toolchainFile": "${sourceParentDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE":  "${sourceParentDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "DISABLE_VCPKG_INSTALL_OPTIONS": "--x-abi-tools-use-exact-versions"
+      },
+      "environment": {
+        "VCPKG_CACHE_TOKEN" : "1220def19d34024018058e81c0023259955ae659",
+        "DISABLE_VCPKG_BINARY_SOURCES": "default;http,https://jenkins.inviwo.org/cache/{sha},readwrite,Authorization: Bearer $env{VCPKG_CACHE_TOKEN}"
+      }
+    },
+
+    {
+      "name": "msvc",
+      "displayName": "MSVC 2022",
+      "description": "MSVC 2022 Development configuration",
+      "generator": "Visual Studio 17 2022",
+      "architecture" : "x64",
+      "binaryDir": "${sourceParentDir}/build",
+      "inherits" : ["vcpkg"]
+    },
+
+    {
+      "name": "xcode",
+      "displayName": "Xcode",
+      "generator": "Xcode",
+      "binaryDir": "${sourceParentDir}/build",
+      "inherits" : ["vcpkg"]
+    },
+
+    {
+      "name": "ninja",
+      "displayName": "Ninja",
+      "generator": "Ninja",
+      "binaryDir": "${sourceParentDir}/build",
+      "inherits" : ["vcpkg"]
+    },
+    {
+      "name": "make",
+      "displayName": "Unix Makefiles",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceParentDir}/build",
+      "inherits" : ["vcpkg"]
+    }
+  ]
+}
