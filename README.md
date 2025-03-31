@@ -21,13 +21,15 @@ Dependencies:
 - [Vcpkg](https://github.com/microsoft/vcpkg) For dependency management
 - C++20 Required, e.g. [Visual Studio](https://visualstudio.microsoft.com/downloads/)
 
-1.  Make a project folder for example 'tnm094'
+1.  Clone the project
 
 2.  In the project folder **_ParticleSystem/_**:
 
-```bash
-git clone https://github.com/microsoft/vcpkg
-```
+    _Open up the console and run:_
+
+    ```bash
+    git clone https://github.com/microsoft/vcpkg
+    ```
 
 3.  Open CMake (we recommend using the GUI here), enter the source path to the particlesystem git repo
     and select one of the "presets" ("MSVC 2022", "Xcode", "Ninja", "Unix Makefiles")
