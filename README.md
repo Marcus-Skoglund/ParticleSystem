@@ -23,9 +23,11 @@ Dependencies:
 
 1.  Make a project folder for example 'tnm094'
 
-2.  In the project folder:
+2.  In the project folder **_ParticleSystem/_**:
 
-    - git clone https://github.com/microsoft/vcpkg
+```bash
+git clone https://github.com/microsoft/vcpkg
+```
 
 3.  Open CMake (we recommend using the GUI here), enter the source path to the particlesystem git repo
     and select one of the "presets" ("MSVC 2022", "Xcode", "Ninja", "Unix Makefiles")
