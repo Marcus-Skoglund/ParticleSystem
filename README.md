@@ -8,7 +8,7 @@ A minimal particle system acting as a foundation for the course labs.
 A small graphical interface is provided for visually editing parameters.
 
 #### UML diagrams
-[Click here for diagrams](https://img.shields.io/badge/contributors-3-green)
+[Click here for diagrams](https://drive.google.com/file/d/1VYjRpuxV53BEmxqkvz2iq4STdPoqGKrt/view?usp=sharing)
 
 #### Folder structure
 
