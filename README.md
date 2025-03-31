@@ -26,7 +26,7 @@ Dependencies:
 
 1.  Clone the project
 
-2.  In the project folder **_ParticleSystem/_**:
+2.  In the main project folder **_ParticleSystem/_**:
 
     _Open up the console and run:_
 
