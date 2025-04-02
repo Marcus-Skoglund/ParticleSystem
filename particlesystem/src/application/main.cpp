@@ -157,6 +157,11 @@ int main(int, char**) try {
                     ps.emitters.push_back(new Directional(directionalPosition, directionalAngle));
                 }
 
+                // lab 3 print-out (task 6) 
+                //std::cout << "[DEBUG] (" << __FILE__ << ":" << __FUNCTION__ << " in " << __LINE__ << ") \n";
+                //std::cout << "Particle Position: (" << PosX << ", " << PosY << ") \n";
+                //std::cout << "Particle Angle: (" << directionalAngle << ") \n";
+
                 // Uniform 
                 static int amount = 10; // Default particle amount
 
@@ -172,6 +177,29 @@ int main(int, char**) try {
 
                     // Create a new uniform emitter with the current position and amount
                     ps.emitters.push_back(new Uniform(uniformPosition, amount));
+                }
+
+                // SpinningUniform
+                static int amountSU = 10;  // Default particle amount
+                static float speed = 1.0f; // Default retational speed
+
+                // Slider for amount
+                if (window.sliderInt("Particle amount", amountSU, 0, 40)) {
+                    // Amount was updated
+                }
+
+                // Slider for rotation speed
+                if (window.sliderFloat("Rotation speed", speed, 0.1f, 2.0f)) {
+                    // Amount was updated
+                }
+
+                // Button to create a new uniform emitter
+                if (window.button("Create SpinningUniform Emitter")) {
+                    // Create a glm::vec2 for the position
+                    glm::vec2 spinninguniformPosition = {PosX, PosY};
+
+                    // Create a new uniform emitter with the current position and amount
+                    ps.emitters.push_back(new SpinningUniform(spinninguniformPosition, amountSU, speed));
                 }
 
                 // Explosion
@@ -305,6 +333,8 @@ int main(int, char**) try {
                 window.endGuiWindow();
             }
         }
+        // Check amount of particles alive
+        //std::cout << "Particles alive: (" << ps.particles.size() << ") \n";
 
         window.endFrame();
         running = running && !window.shouldClose();

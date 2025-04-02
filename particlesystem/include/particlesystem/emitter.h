@@ -31,6 +31,17 @@ public:
     //~Uniform();
 };
 
+class SpinningUniform : public Emitter {
+
+public:
+    SpinningUniform(glm::vec2 position, int amount, float speed)
+        : Emitter(), position(position), amount(amount), speed(speed) {}
+    void addParticle(std::vector<Particle>& particles, float dt) override;
+    glm::vec2 position;  // position of the emitter
+    int amount;          // particle amount
+    float speed;        // Spinning speed
+};
+
 class Explosion : public Emitter {
 
 public:

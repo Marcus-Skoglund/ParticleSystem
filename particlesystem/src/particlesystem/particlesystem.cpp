@@ -29,12 +29,12 @@
 
 void Particlesystem::update(float dt) {
 
-    for (size_t i = 0; i < particles.size(); i++) {
+    for (int i = static_cast<int>(particles.size()) - 1; i >= 0; i--) {
         particles[i].lifetime -= dt;
         particles[i].position += particles[i].velocity * dt;
 
         if (particles[i].lifetime <= 0) {
-            particles.erase(particles.begin() + int(i));
+            particles.erase(particles.begin() + i);
         }
     }
 
